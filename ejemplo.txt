@@ -1,0 +1,11 @@
+
+
+Inicio
+	Entero a = 74
+	Entero e = 8
+	Entero i = 8
+	Cadena d = hola
+	a = 3
+	c = a * b
+	mostrar c
+Fin
