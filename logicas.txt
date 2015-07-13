@@ -1,0 +1,13 @@
+Cadena <= Cadena	V
+Cadena <= Entero	V
+Entero <= Entero	V
+Entero <= Cadena	F
+
+
+Cadena = Cadena + Cadena	V
+Cadena = Cadena + Entero	F
+Cadena = Entero + Entero	V
+Entero = Entero + Entero	V
+Entero = Entero + Cadena	F
+Entero = Cadena + Entero	F
+	

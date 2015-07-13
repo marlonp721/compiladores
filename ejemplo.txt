@@ -1,11 +1,22 @@
 
 
+
+
+
+
+
+
 Inicio
-	Entero a = 74
-	Entero e = 8
-	Entero i = 8
-	Cadena d = hola
-	a = 3
-	c = a * b
-	mostrar c
+	Entero &a
+	Entero &e
+	Entero &o
+	Entero &i
+	Entero &u
+	&o = 12
+	&u = 123
+	&e = 2
+	Mostrar &u
+	&a = 12 / &e
+	&i = 4 / &e
+	Mostrar &i
 Fin

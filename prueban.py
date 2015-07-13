@@ -1,5 +1,6 @@
 variables = ["a","e","i","o","u"]
 ayuda_registro = {variables[0]:None,variables[1]:None,variables[2]:None,variables[3]:None,variables[4]:None}
+ayuda_registro2 = {variables[0]:None,variables[1]:None,variables[2]:None,variables[3]:None,variables[4]:None}
 #ayuda_registro[variables[0]]=1
 #print(ayuda_registro)
 palabras_clave = ["Inicio","Fin","Entero","Cadena","Mostrar"]
@@ -68,11 +69,11 @@ if archivo_array[0] == palabras_clave[0]:
 		#print(len(archivo2))
 		#print(archivo2)
 		for i in range(len(archivo2)):
-			
+			z = int(cont)+1+int(i)+1
 #palabras_clave = ["Inicio","Fin","Entero","Cadena","Mostrar"] 
 			if archivo2[i][0]==palabras_clave[2] or archivo2[i][0]==palabras_clave[3]:
 				encontrar_variable = archivo2[i][1] in variables
-				z = int(cont)+1+int(i)+1
+				#z = int(cont)+1+int(i)+1
 				if encontrar_variable != True:
 					print("Error: la variable <",archivo2[i][1],"> no existe dentro de la gramatica\tError: en la fila",z)
 				else:
@@ -83,14 +84,45 @@ if archivo_array[0] == palabras_clave[0]:
 								print("Error: la variable <",archivo2[i][1],"> no es entero\tError: en la fila",z)
 							else:	
 								ayuda_registro[archivo2[i][1]] = [archivo2[i][3]]
+								ayuda_registro2[archivo2[i][1]] = "Entero"
 						if archivo2[i][0] == palabras_clave[3]:
 							ayuda_registro[archivo2[i][1]] = [archivo2[i][3]]
+							ayuda_registro2[archivo2[i][1]] = "Cadena"
+			else: 
+				if archivo2[i][0] != palabras_clave[4]:
+					encontrar_variable = archivo2[i][0] in variables
+					try:
+						encontrar_operador = archivo2[i][0] in operadores
+						print(encontrar_operador)
+					except IndexError:
+						if encontrar_variable != True:
+							print("Error: la variable <",archivo2[i][0],"> no existe dentro de la gramatica\tError: en la fila",z)
+						else:
+							if archivo2[i][1] == operadores[4]:
+								asd = ayuda_registro2.get(archivo2[i][0])
+								encontrar_v = archivo2[i][2] in variables 
+								encontrar_n = esentero(archivo2[i][2])	
+								if asd == None:
+									print("Error: la variable <",archivo2[i][0],"> no esta declarada\tError: en la fila",z)
+								else:
+									if encontrar_v == True or encontrar_n == True:
+										print("hola")
+									else:
+										print("es cadena")	
 
-			else:
-				print("no esta declarando variables")
-		prueba = str(ayuda_registro.get("a"))
-		prueba = prueba[2:-2]
-		print(ayuda_registro)
+								
+								#print(encontrar_v)
+								#print(encontrar_n)
+
+				else:
+					print("Este muestra")
+				#print(archivo2[i][0])
+				#print("no esta declarando variables")
+		#print(archivo2)
+		#prueba = str(ayuda_registro.get("a"))
+		#prueba = prueba[2:-2]
+		#print(ayuda_registro)
+		#print(ayuda_registro2)
 
 
 			
