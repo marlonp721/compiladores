@@ -1,8 +1,4 @@
 variables = ["&a","&e","&i","&o","&u"]
-ayuda_registro = {variables[0]:None,variables[1]:None,variables[2]:None,variables[3]:None,variables[4]:None}
-ayuda_registro2 = {variables[0]:None,variables[1]:None,variables[2]:None,variables[3]:None,variables[4]:None}
-#ayuda_registro[variables[0]]=1
-#print(ayuda_registro)
 palabras_clave = ["Inicio","Fin","Entero","Cadena","Mostrar"]
 operadores = ["+","-","*","/","="]
 numero = ["0","1","2","3","4","5","6","7","8","9"]
@@ -30,6 +26,9 @@ def esentero(entrada):
 	c = "No es entero" in lista
 	c = not c
 	return c
+
+ayuda_registro = {variables[0]:None,variables[1]:None,variables[2]:None,variables[3]:None,variables[4]:None}
+ayuda_registro2 = {variables[0]:None,variables[1]:None,variables[2]:None,variables[3]:None,variables[4]:None}
 
 archivo=open('/home/marlonp/python/ejemplo.txt','r')
 archivo_array=archivo.readlines()
